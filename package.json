@@ -1,0 +1,23 @@
+{
+  "name": "ttttask",
+  "version": "0.0.1",
+  "description": "Task By Nihar Rao",
+  "dependencies": {
+    "download": "^6.2.5",
+    "express": "^4.15.2",
+    "hashmap": "^2.3.0",
+    "http-request": "^0.7.0",
+    "min-heap": "^0.2.3",
+    "minheap": "^1.0.2",
+    "request": "^2.83.0",
+    "socket.io": "^2.0.4",
+    "url-parse": "^1.2.0",
+    "valid-url": "^1.0.9"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

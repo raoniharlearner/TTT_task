@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TTT task</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+</head>
+
+
+<body>
+	<br><br><br><br><br><br><br><br><br>
+	<center>
+
+		<form id = "form1">
+
+			Enter Number: <br><br>
+
+			<input type="number" name="k" id="input" required> <br><br>
+
+			<input type="submit" name="submit">
+			<br>
+		</form>
+		<br>
+
+		<div id="table">
+
+		</div>
+
+
+
+
+	</center>
+
+
+</body>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script>
+	$(function () {
+		var socket = io();
+		$('form').submit(function(){
+			socket.emit('post input', $('#input').val());
+			return false;
+		});
+		socket.on('send output', function(msg){
+			$('#table').html(msg);
+		});
+	});
+</script>
+</html>
