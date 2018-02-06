@@ -54,6 +54,8 @@ Further optimizations that can be done:
 Prefetch and compute the hash, and not compute again for each user input.
 Use a CRON to check if txt file was changed,If changed then precompute again.
 
+Don't consider stop words like 'to','and','or', as they are in every sentence.
+
 
 By: Nihar Rao
 
